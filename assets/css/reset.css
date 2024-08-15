@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* importamos una nueva fuente */
+@font-face {
+  font-family: roboto;
+  src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+
+/* configuramos las variables personalizadas */
+:root {
+  --azul-oscuro: #19376D;
+  --azul-claro: #ECF9FF;
+  --negro: #021526;
+  --gris: #787A91;
+  --blanco: #ffffff;
+  --fuente: roboto;
+}
+
+/* reseteamos los margin y padding */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* configuramos el cuerpo del documento */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--fuente);
+  background-color: var(--azul-claro);
+}
+
+/* reseteamos las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* reseteamos los svg */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* reseteamos los enlaces para que funcionen como cajas */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* si se encuentran dentro de un parrafo no */
+p a {
+  display: inline;
+}
+
+/* reseteamos los puntos de las listas */
+li {
+  list-style-type: none;
+}
+
+/* configuramos suavidad */
+html {
+  scroll-behavior: smooth;
+}
+
+/* reseteamos estilos por defector de las etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* reseteamos las etiquetas de formulario */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}

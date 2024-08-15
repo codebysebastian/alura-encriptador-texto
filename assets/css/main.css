@@ -1,0 +1,148 @@
+@import 'reset.css';
+
+.header {
+    width: 100%;
+    padding: 1em 0 1em 1em;
+}
+
+.header__imagen {
+    width: 3em;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main__contenedor {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main__div {
+    width: 100%;
+    display: flex;
+}
+
+.div--texto {
+    flex-direction: column;
+}
+
+.input__texto {
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    padding: 0.5em;
+    height: 50vh;
+    color: var(--azul-oscuro);
+    font-size: xx-large;
+    overflow: auto;
+    resize: none;
+    text-decoration: none;
+}
+
+/* Firefox */
+::placeholder {
+    color: var(--azul-oscuro);
+}
+
+/* edge 12-18 */
+::-ms-input-placeholder {
+    color: var(--azul-oscuro);
+}
+
+.p__recomendacion {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3em;
+    color: var(--gris);
+    padding-left: 1em;
+
+}
+
+.p__image {
+    width: 1em;
+    display: inline;
+}
+
+.div--botones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.boton {
+    width: 90%;
+    padding: 1em 0 1em 0;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.boton--encriptar {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border-color: var(--azul-oscuro);
+}
+
+.boton--encriptar:active {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+}
+
+.boton--desencriptar {
+    color: var(--azul-oscuro);
+    border-color: var(--azul-oscuro);
+}
+
+.boton--desencriptar:active {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+.contenedor--mensaje {
+    text-align: center;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+
+.mensaje__titulo {
+    color: var(--negro);
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.mensaje__cuerpo {
+    color: var(--negro);
+}
+
+@media only screen and (min-width: 768px) {
+    .main {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .contenedor--mensaje {
+        height: 100%;
+        margin: 0;
+        height: max-content;
+    }
+}
